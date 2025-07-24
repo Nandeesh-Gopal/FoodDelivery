@@ -12,5 +12,33 @@
                 <a href="login.html">Login</a>
             </div>
         </nav>
+        <h1>Order Summary</h1>
+        <div style="display: flex; flex-direction: column;gap: 20px;padding-top: 20px;align-items: center;">
+        <div class="cont-order">
+            <div style="display: flex; align-items: center;gap: 30px;">
+            <img src="assets/rotti.avif" alt="">
+            <div>
+            <h1>Roti</h1>
+            <h6>Indian recipe</h6></div></div>
+            <p>1</p>
+        </div>
+        <div class="cont-order">
+            <div style="display: flex; align-items: center;gap: 30px;">
+            <img src="assets/mutton-gravy.avif" alt="">
+            <div>
+            <h1>Mutton-gravy</h1>
+            <h6>Indian recipe</h6></div></div>
+            <p>1</p>
+        </div>
+        <label for="Address">Enter your Location</label>
+        <textarea name="Address" id="Address"></textarea>
+        <label for="no" >Enter your Mobile number</label>
+        <input type="number" placeholder="9999988888">
+        <label for="payment">Payment Method</label>
+        <label for="cod"><input type="radio" id="cod"value="cod"> Cash on Delivery</label>
+        <label for="cod"><input type="radio" id="cod"value="upi"> upi</label>
+
+        <button class="buy ">Proceed to buy</button>
+    </div>
     </body>
 </html>

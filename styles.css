@@ -116,4 +116,25 @@
     background-color: rgb(255, 77, 0);
     border-radius: 20px;
 }
-
+.cont-order{
+    min-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(255, 77, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cont-order img{
+    border-radius: 20px 0 0 20px ;
+    width: 200px;
+    height: 150px;
+}
+button{
+    border: 0px;
+    font: 1em sans-serif;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: rgb(255, 77, 0);
+    border-radius: 20px;
+}
