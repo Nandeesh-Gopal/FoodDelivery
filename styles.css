@@ -81,17 +81,39 @@
     border-radius: 20px;
 }
 .sub-cont-items{
-    max-width: 700px;
+    min-width: 800px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgb(255, 77, 0);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .sub-cont-items img{
     border-radius: 20px 0 0 20px ;
+    width: 200px;
+    height: 150px;
+}
+.sub-cont-items input{
+    width: 60px;
+    height: 20px;
+    padding-right: 30px;
+    border: 0px;
 }
 .container-items{
     display: flex;
-    justify-content: cente;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
 }
+.buy_button{
+    border: 0px;
+    font: 1em sans-serif;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: rgb(255, 77, 0);
+    border-radius: 20px;
+}
+
