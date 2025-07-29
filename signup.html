@@ -3,6 +3,7 @@
     <head>
         <title>signup</title>
         <link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
     </head>
     <body>
         <nav class="nav-bar">
@@ -16,6 +17,10 @@
             <div class="container1">
                 <h1>SIGN UP</h1>
                 <form id="signupForm" method="POST" action="/signup">
+                    <div>
+                        <label for="username">Enter your email</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
                     <div>
                         <label for="mail">Enter your email</label>
                         <input type="email" id="mail" name="email" required>
@@ -31,7 +36,7 @@
         </div>
         <footer class="footer">
             <div class="social">
-            <P style="color: white;padding-left: 20px;">Follow Us On</P>
+            <P style="color:white;padding-left: 20px;">Follow Us On</P>
             <img src="assets/icons/facebook.png" alt="">
             <img src="assets/icons/linkedin.png" alt="">
             <img src="assets/icons/social(1).png" alt="">
