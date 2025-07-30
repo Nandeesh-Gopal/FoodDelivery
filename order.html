@@ -15,29 +15,32 @@
         <h1>Order Summary</h1>
         <div style="display: flex; flex-direction: column;gap: 20px;padding-top: 20px;align-items: center;" id="ordersumm">
        
-        <div>
+        <div style="display: flex;flex-direction: column;gap: 30px;">
         <label for="Address">Enter your Location</label>
         <textarea name="Address" id="Address"></textarea>
         <label for="no" >Enter your Mobile number</label>
         <input type="number" placeholder="9999988888">
         <label for="payment">Payment Method</label>
-        <label for="cod"><input type="radio" id="cod"value="cod"> Cash on Delivery</label>
-        <label for="cod"><input type="radio" id="cod"value="upi"> upi</label>
+        <label for="cod"><input type="radio" id="cod"value="cod"> Cash On Delivery</label>
+        <label for="cod"><input type="radio" id="cod"value="upi"> UPI</label>
 
         <button class="buy ">Proceed to buy</button>
     </div></div>
     <script>
-        const items=JSON.parse(localStorage,getItem("orderData"))
-        const Summary=document.getElementById("ordersumm")
-        let total=0;
+        const items = JSON.parse(localStorage.getItem("orderData"));
+        const summaryDiv = document.getElementById("ordersumm");
+        let total = 0;
+
         items.forEach(element => {
-            const itotal=element.price*element.quantity
-            total=total+itotal
-            Summary.document +=`
-                <p>{element.name}-{elemt.price}*{element.quantity}={itotal}</p>
-            `
+            const itemTotal = element.price * element.quantity;
+            total += itemTotal;
+
+            summaryDiv.innerHTML += `
+                <p>${element.name} - ₹${element.price} × ${element.quantity} = ₹${itemTotal}</p>
+            `;
         });
-        document.getElementById("total").innerHTML=total;
+
+        document.getElementById("total").innerText = `Total: ₹${total}`;
     </script>
     <footer class="footer">
             <div class="social">
