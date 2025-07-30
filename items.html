@@ -3,7 +3,7 @@
 <head>
     <title>items</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles/index.css"
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <nav class="nav-bar">
@@ -21,7 +21,9 @@
             <div>
             <h1>Roti</h1>
             <h6>Indian recipe</h6></div></div>
-            <input type="number" min="0" value="1">
+            <div style="display: flex;gap: 30px;align-items: center;">
+            <p>30₹</p>
+            <input type="number" min="0" value="1" data-name="Roti"data-price="30"></div>
         </div>
         <div class="sub-cont-items">
             <div style="display: flex; align-items: center;gap: 30px;">
@@ -29,7 +31,9 @@
             <div>
             <h1>Idli</h1>
             <h6>Indian recipe</h6></div></div>
-            <input type="number" min="0" value="1">
+            <div style="display: flex;gap: 30px;align-items: center;">
+            <p>20₹</p>
+            <input type="number" min="0" value="1" data-name="Idli"data-price="20"></div>
         </div>
         <div class="sub-cont-items">
             <div style="display: flex; align-items: center;gap: 30px;">
@@ -37,7 +41,9 @@
             <div>
             <h1>Dosa</h1>
             <h6>Indian recipe</h6></div></div>
-            <input type="number" min="0" value="1">
+            <div style="display: flex;gap: 30px;align-items: center;">
+            <p>30₹</p>
+            <input type="number" min="0" value="0" data-name="Dosa" data-price="30"></div>
         </div>
         <div class="sub-cont-items">
             <div style="display: flex; align-items: center;gap: 30px;">
@@ -45,7 +51,9 @@
             <div>
             <h1>Mutton-gravy</h1>
             <h6>Indian recipe</h6></div></div>
-            <input type="number" min="0" value="1">
+            <div style="display: flex;gap: 30px;align-items: center;">
+            <p>240₹</p>
+            <input type="number" min="0" value="0" data-name="Mutton-gravy"data-price="240"></div>
         </div>
         <div class="sub-cont-items">
             <div style="display: flex; align-items: center;gap: 30px;">
@@ -53,11 +61,15 @@
             <div>
             <h1>Parrotta</h1>
             <h6>Indian recipe</h6></div></div>
-            <input type="number" min="0" value="1">
+            <div style="display: flex;gap: 30px;align-items: center;">
+            <p>40₹</p>
+            <input type="number" min="0" value="0" data-name="parotta" data-price="40"></div>
         </div>
     </div>
     <br>
-    <center><a href="order.html"><button class="buy_button">Proceed to Buy</button></a></center><footer class="footer">
+    <center><a href="order.html"><button class="buy_button">Proceed to Buy</button></a></center>
+    
+    <footer class="footer">
             <div class="social">
             <P style="color: white;padding-left: 20px;">Follow Us On</P>
             <img src="assets/icons/facebook.png" alt="">

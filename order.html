@@ -13,23 +13,8 @@
             </div>
         </nav>
         <h1>Order Summary</h1>
-        <div style="display: flex; flex-direction: column;gap: 20px;padding-top: 20px;align-items: center;">
-        <div class="cont-order">
-            <div style="display: flex; align-items: center;gap: 30px;">
-            <img src="assets/rotti.avif" alt="">
-            <div>
-            <h1>Roti</h1>
-            <h6>Indian recipe</h6></div></div>
-            <p>1</p>
-        </div>
-        <div class="cont-order">
-            <div style="display: flex; align-items: center;gap: 30px;">
-            <img src="assets/mutton-gravy.avif" alt="">
-            <div>
-            <h1>Mutton-gravy</h1>
-            <h6>Indian recipe</h6></div></div>
-            <p>1</p>
-        </div>
+        <div style="display: flex; flex-direction: column;gap: 20px;padding-top: 20px;align-items: center;" id="ordersumm">
+       
         <div>
         <label for="Address">Enter your Location</label>
         <textarea name="Address" id="Address"></textarea>
@@ -41,6 +26,19 @@
 
         <button class="buy ">Proceed to buy</button>
     </div></div>
+    <script>
+        const items=JSON.parse(localStorage,getItem("orderData"))
+        const Summary=document.getElementById("ordersumm")
+        let total=0;
+        items.forEach(element => {
+            const itotal=element.price*element.quantity
+            total=total+itotal
+            Summary.document +=`
+                <p>{element.name}-{elemt.price}*{element.quantity}={itotal}</p>
+            `
+        });
+        document.getElementById("total").innerHTML=total;
+    </script>
     <footer class="footer">
             <div class="social">
             <P style="color: white;padding-left: 20px;">Follow Us On</P>

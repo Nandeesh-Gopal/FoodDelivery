@@ -15,9 +15,21 @@ app.post("/signup",(req, res) => {
             email: req.body.email,
             password: req.body.password
         });
-        user.save();
-    res.sendFile(path.join(__dirname,"index.html"))
+        user.save().then(()=>{
+            res.redirect("/?message="+encodeURIComponent("Welcome "+req.body.name+"!"))
+        })
 });
+app.post("/login",async (req,res)=>{
+    const {email,password}=req.body
+    const user= await User.findOne({email})
+    if(!user){
+        return res.redirect("/login.html?message=User not found")
+    }
+    if(user.password!=password){
+        return res.redirect("/login.html?message=Incorrect Password")
+    }
+    return res.redirect("/?message=Welcome "+encodeURIComponent(user.name))
+})
 app.listen(3000,()=>{
     console.log("server is running")
 })
