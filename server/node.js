@@ -2,7 +2,7 @@ const express=require("express")
 const path=require("path")
 const mongo=require("mongoose")
 const app=express()
-mongo.connect("mongodb+srv://nandeesh:Nandbtech07@cluster0.ko2qcxc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(()=>console.log("Mongo connected"))
+mongo.connect("").then(()=>console.log("Mongo connected"))
 const User=mongo.model("user",{name:String,email:String,password:String});
 app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname)))
